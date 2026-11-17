@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELAMET-AGRO Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="brand">
+            <h2>SELAMET<span>-AGRO</span></h2>
+            <p>Smart Greenhouse System</p>
+        </div>
+
+        <nav>
+            <a href="#overview" class="active">▦ Overview</a>
+            <a href="#environment">☀ Environmental</a>
+            <a href="#soil">♧ Soil Monitoring</a>
+            <a href="#irrigation">💧 Irrigation</a>
+            <a href="#energy">⚡ Energy</a>
+            <a href="#harvest">🌱 Crop & Harvest</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <p>SELAMET-AGRO v1.0</p>
+            <small>Greenhouse Management</small>
+        </div>
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- HEADER -->
+        <header class="header" id="overview">
+            <div>
+                <h1>Greenhouse Dashboard</h1>
+                <p>Monitoring budidaya cabai merah keriting</p>
+            </div>
+
+            <div class="system-status">
+                <span class="status-dot"></span>
+                System Monitoring
+            </div>
+        </header>
+
+
+        <!-- ENVIRONMENTAL MONITORING -->
+        <section id="environment">
+            <div class="section-title">
+                <h2>Environmental Monitoring</h2>
+                <p>Kondisi lingkungan greenhouse</p>
+            </div>
+
+            <div class="card-grid four">
+
+                <div class="card">
+                    <div class="card-icon orange">☀</div>
+                    <p>Suhu Udara</p>
+                    <h3>28.5 <small>°C</small></h3>
+                    <span class="card-note">Temperature</span>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon blue">💧</div>
+                    <p>Kelembapan Udara</p>
+                    <h3>72 <small>%</small></h3>
+                    <span class="card-note">Relative Humidity</span>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon purple">◉</div>
+                    <p>VPD</p>
+                    <h3>0.95 <small>kPa</small></h3>
+                    <span class="card-note">Vapor Pressure Deficit</span>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon green">☘</div>
+                    <p>Kelembapan Tanah</p>
+                    <h3>45 <small>%</small></h3>
+                    <span class="card-note">Soil Moisture</span>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- IRRIGATION CONTROL -->
+        <section id="irrigation">
+            <div class="section-title">
+                <h2>Irrigation Control</h2>
+                <p>Status dan aktivitas irigasi otomatis</p>
+            </div>
+
+            <div class="irrigation-panel">
+
+                <div class="irrigation-info">
+                    <p class="label">Pump Status</p>
+                    <h2 class="standby">STANDBY</h2>
+                    <p class="description">
+                        Pompa sedang tidak aktif.
+                    </p>
+                </div>
+
+                <div class="irrigation-info">
+                    <p class="label">Solenoid Valve</p>
+                    <h2 class="standby">CLOSED</h2>
+                    <p class="description">
+                        Katup irigasi tertutup.
+                    </p>
+                </div>
+
+                <div class="irrigation-info">
+                    <p class="label">Water Usage Today</p>
+                    <h2>12.5 <small>L</small></h2>
+                    <p class="description">
+                        Total penggunaan air hari ini.
+                    </p>
+                </div>
+
+                <div class="irrigation-info">
+                    <p class="label">Last Irrigation</p>
+                    <h2>10:30</h2>
+                    <p class="description">
+                        Waktu penyiraman terakhir.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="decision-box">
+                <div>
+                    <h3>System Decision</h3>
+                    <p>
+                        Sistem berada dalam kondisi standby.
+                        Kelembapan tanah masih berada di atas
+                        ambang irigasi.
+                    </p>
+                </div>
+                <span class="decision-status">No Irrigation</span>
+            </div>
+        </section>
+
+
+        <!-- ENERGY MONITORING -->
+        <section id="energy">
+            <div class="section-title">
+                <h2>Energy Monitoring</h2>
+                <p>Penggunaan dan ketersediaan energi</p>
+            </div>
+
+            <div class="card-grid three">
+
+                <div class="card">
+                    <div class="card-icon orange">☀</div>
+                    <p>Solar Generation</p>
+                    <h3>120 <small>Wh</small></h3>
+                    <span class="card-note">Energi yang dihasilkan</span>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon green">▰</div>
+                    <p>Battery Level</p>
+                    <h3>85 <small>%</small></h3>
+                    <div class="progress">
+                        <div class="progress-fill battery"></div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon blue">⚡</div>
+                    <p>Energy Consumption</p>
+                    <h3>75 <small>Wh</small></h3>
+                    <span class="card-note">Konsumsi energi hari ini</span>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- CROP MONITORING -->
+        <section id="harvest">
+            <div class="section-title">
+                <h2>Crop & Harvest Monitoring</h2>
+                <p>Perkembangan tanaman cabai merah keriting</p>
+            </div>
+
+            <div class="card-grid three">
+
+                <div class="card">
+                    <div class="card-icon green">🌱</div>
+                    <p>Growth Phase</p>
+                    <h3 class="text-value">Vegetative</h3>
+                    <span class="card-note">Fase pertumbuhan tanaman</span>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon green">♧</div>
+                    <p>Plant Height</p>
+                    <h3>35 <small>cm</small></h3>
+                    <span class="card-note">Tinggi rata-rata tanaman</span>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon orange">♨</div>
+                    <p>Flower Count</p>
+                    <h3>-- <small>bunga</small></h3>
+                    <span class="card-note">Jumlah bunga teramati</span>
+                </div>
+
+            </div>
+
+            <div class="harvest-panel">
+                <div>
+                    <p>Total Harvest</p>
+                    <h2>-- <small>kg</small></h2>
+                </div>
+
+                <div>
+                    <p>Marketable Yield</p>
+                    <h2>-- <small>kg</small></h2>
+                </div>
+
+                <div>
+                    <p>Unmarketable Yield</p>
+                    <h2>-- <small>kg</small></h2>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+            <p>
+                © 2026 SELAMET-AGRO |
+                Smart Adaptive Irrigation System
+            </p>
+        </footer>
+
+    </main>
+</div>
+
+</body>
+</html>
