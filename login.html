@@ -135,6 +135,7 @@
             loginMessage.classList.add("success");
 
             setTimeout(function () {
+                sessionStorage.setItem("selametLogin", "true");
                 window.location.href = "index.html";
             }, 1000);
         });
