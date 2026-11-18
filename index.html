@@ -171,14 +171,38 @@
     </main>
   </div>
   <script>
-document.querySelectorAll('.navigation .nav-link').forEach(link => {
-    link.addEventListener('click', function () {
-        document.querySelectorAll('.navigation .nav-link').forEach(item => {
-            item.classList.remove('active');
-        });
+document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll(".navigation .nav-link");
+    const sections = document.querySelectorAll("#overview, #soil, #irrigation, #history");
 
-        this.classList.add('active');
+    function setActive(id) {
+        navLinks.forEach(link => {
+            link.classList.toggle("active", link.getAttribute("href") === "#" + id);
+        });
+    }
+
+    // Highlight saat menu diklik
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            const targetId = link.getAttribute("href").substring(1);
+            setActive(targetId);
+        });
     });
+
+    // Highlight otomatis mengikuti section yang terlihat
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                setActive(entry.target.id);
+            }
+        });
+    }, {
+        root: null,
+        rootMargin: "-25% 0px -60% 0px",
+        threshold: 0
+    });
+
+    sections.forEach(section => observer.observe(section));
 });
 </script>
 </body>
