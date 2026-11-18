@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | SELAMET-AGRO</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <main class="login-container">
+
+        <!-- SISI KIRI -->
+        <section class="login-brand">
+            <div class="brand-content">
+                <img src="logo-selamet.png" alt="Logo SELAMET-AGRO">
+
+                <h1>SELAMET-AGRO</h1>
+                <p class="brand-subtitle">SMART IRRIGATION SYSTEM</p>
+
+                <div class="brand-description">
+                    <h2>Smart Agriculture,<br>Better Irrigation.</h2>
+                    <p>
+                        Sistem monitoring dan pengendalian irigasi
+                        berbasis kelembapan tanah untuk budidaya
+                        cabai merah keriting.
+                    </p>
+                </div>
+            </div>
+
+            <p class="brand-footer">
+                SELAMET-AGRO © 2026
+            </p>
+        </section>
+
+        <!-- SISI KANAN -->
+        <section class="login-form-section">
+
+            <div class="login-form-wrapper">
+
+                <span class="login-label">WELCOME BACK</span>
+
+                <h2>Selamat Datang</h2>
+
+                <p class="login-description">
+                    Masuk untuk mengakses dashboard
+                    monitoring SELAMET-AGRO.
+                </p>
+
+                <form id="loginForm">
+
+                    <div class="form-group">
+                        <label for="username">Email atau Username</label>
+                        <input
+                            type="text"
+                            id="username"
+                            placeholder="Masukkan email atau username"
+                            autocomplete="username"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Password</label>
+
+                        <div class="password-wrapper">
+                            <input
+                                type="password"
+                                id="password"
+                                placeholder="Masukkan password"
+                                autocomplete="current-password"
+                                required
+                            >
+
+                            <button
+                                type="button"
+                                id="togglePassword"
+                                class="toggle-password"
+                            >
+                                Lihat
+                            </button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="login-button">
+                        Masuk ke Dashboard
+                        <span>→</span>
+                    </button>
+
+                    <p id="loginMessage" class="login-message"></p>
+
+                </form>
+
+                <div class="login-note">
+                    <span>ⓘ</span>
+                    Halaman login ini masih dalam mode prototype.
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script>
+        const loginForm = document.getElementById("loginForm");
+        const passwordInput = document.getElementById("password");
+        const togglePassword = document.getElementById("togglePassword");
+        const loginMessage = document.getElementById("loginMessage");
+
+        // Menampilkan dan menyembunyikan password
+        togglePassword.addEventListener("click", function () {
+            const isPassword = passwordInput.type === "password";
+
+            passwordInput.type = isPassword ? "text" : "password";
+            this.textContent = isPassword ? "Sembunyikan" : "Lihat";
+        });
+
+        // Simulasi proses login
+        loginForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const username = document.getElementById("username").value.trim();
+            const password = passwordInput.value;
+
+            if (!username || !password) {
+                loginMessage.textContent = "Silakan isi semua kolom.";
+                return;
+            }
+
+            loginMessage.textContent =
+                "Login simulasi berhasil. Mengalihkan ke dashboard...";
+
+            loginMessage.classList.add("success");
+
+            setTimeout(function () {
+                window.location.href = "index.html";
+            }, 1000);
+        });
+    </script>
+
+</body>
+</html>
