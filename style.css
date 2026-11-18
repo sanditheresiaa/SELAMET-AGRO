@@ -237,3 +237,13 @@ footer { display: flex; justify-content: space-between; gap: 15px; padding: 18px
     object-fit: contain !important;
     display: block;
 }
+.nav-link.active {
+    background: var(--active-bg, #285c47);
+    color: #ffffff;
+    font-weight: 700;
+    border-left: 4px solid #a8d5b8;
+}
+
+.nav-link {
+    transition: background 0.2s ease, color 0.2s ease;
+}
