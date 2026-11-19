@@ -110,16 +110,42 @@
             </article>
           </div>
 
-          <aside class="threshold-card">
-            <div class="threshold-heading"><span class="metric-icon green-icon">⌖</span><div><b>Ambang kelembapan</b><small>Parameter kendali irigasi</small></div></div>
-            <div class="threshold-value">40<span>%</span></div>
-            <p>Contoh batas bawah kelembapan. Nilai aktual perlu ditentukan melalui kalibrasi sensor dan karakteristik media tanam.</p>
-            <div class="threshold-line"><span></span></div>
-            <div class="threshold-scale"><span>0%</span><b>Batas contoh: 40%</b><span>100%</span></div>
-            <div class="logic-note"><b>Logika sistem</b><br>Jika kelembapan suatu zona berada di bawah ambang, ESP32 dapat meminta irigasi pada zona tersebut sesuai konfigurasi katup.</div>
-          </aside>
+         
+<aside class="threshold-card">
+    <div class="threshold-heading">
+        <span class="metric-icon green-icon">⌖</span>
+        <div>
+            <b>Ambang kelembapan</b>
+            <small>Parameter kendali irigasi</small>
         </div>
-      </section>
+    </div>
+
+    <div class="threshold-value">80<span>%</span></div>
+
+    <p>
+        Batas bawah kelembapan tanah ditetapkan sebesar 80%.
+        Jika kelembapan tanah berada di bawah nilai tersebut,
+        sistem dapat meminta irigasi.
+    </p>
+
+    <div class="threshold-line">
+        <span style="width: 80%;"></span>
+    </div>
+
+    <div class="threshold-scale">
+        <span>0%</span>
+        <b>Batas contoh: 80%</b>
+        <span>100%</span>
+    </div>
+
+    <div class="logic-note">
+        <b>Logika sistem</b><br>
+        Jika kelembapan suatu zona berada di bawah ambang 80%,
+        ESP32 dapat meminta irigasi pada zona tersebut sesuai
+        konfigurasi katup.
+    </div>
+</aside>
+
 
       <section class="section-block" id="irrigation" aria-labelledby="irrigation-title">
         <div class="section-heading">
