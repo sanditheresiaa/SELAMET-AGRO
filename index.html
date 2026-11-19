@@ -206,6 +206,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     sections.forEach(section => observer.observe(section));
 });
+    // JavaScript Logout
+document.getElementById("logoutButton").addEventListener("click", function () {
+    sessionStorage.removeItem("selametLogin");
+    window.location.replace("login.html");
+});
 </script>
 </body>
 </html>
