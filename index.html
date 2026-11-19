@@ -60,9 +60,9 @@
         <div class="summary-grid">
           <article class="metric-card primary-metric">
             <div class="metric-top"><span>Kelembapan rata-rata</span><span class="metric-icon green-icon">◉</span></div>
-            <div class="metric-value">48<span>%</span></div>
+            <div class="metric-value">61<span>%</span></div>
             <div class="metric-foot"><span class="status-tag status-good">Dalam rentang contoh</span><span>3 zona terpantau</span></div>
-            <div class="mini-track"><span style="width:48%"></span></div>
+            <div class="mini-track"><span style="width:61%"></span></div>
           </article>
           <article class="metric-card">
             <div class="metric-top"><span>Zona paling kering</span><span class="metric-icon amber-icon">⌁</span></div>
@@ -93,14 +93,14 @@
             <article class="zone-card">
               <div class="zone-head"><div><span class="zone-dot zone-a"></span><b>Zona A</b><small>Area depan</small></div><span class="zone-state good-state">Normal</span></div>
               <div class="zone-reading">65<span>%</span></div>
-              <div class="soil-track"><span class="fill-green" style="width:65%"></span></div>
-              <div class="zone-foot"><span>Kelembapan terukur</span><b>65 / 100</b></div>
+              <div class="soil-track"><span class="fill-green" style="width:86%"></span></div>
+              <div class="zone-foot"><span>Kelembapan terukur</span><b>86 / 100</b></div>
             </article>
             <article class="zone-card">
               <div class="zone-head"><div><span class="zone-dot zone-b"></span><b>Zona B</b><small>Area tengah</small></div><span class="zone-state warn-state">Rendah</span></div>
               <div class="zone-reading">48<span>%</span></div>
-              <div class="soil-track"><span class="fill-yellow" style="width:48%"></span></div>
-              <div class="zone-foot"><span>Kelembapan terukur</span><b>48 / 100</b></div>
+              <div class="soil-track"><span class="fill-yellow" style="width:65%"></span></div>
+              <div class="zone-foot"><span>Kelembapan terukur</span><b>65 / 100</b></div>
             </article>
             <article class="zone-card">
               <div class="zone-head"><div><span class="zone-dot zone-c"></span><b>Zona C</b><small>Area belakang</small></div><span class="zone-state dry-state">Kering</span></div>
@@ -122,10 +122,6 @@
 
     <div class="threshold-value">80<span>%</span></div>
 
-    <p>
-        Batas bawah kelembapan tanah ditetapkan sebesar 80%.
-        Jika kelembapan tanah berada di bawah nilai tersebut,
-        sistem dapat meminta irigasi.
     </p>
 
     <div class="threshold-line">
@@ -141,7 +137,7 @@
     <div class="logic-note">
         <b>Logika sistem</b><br>
         Jika kelembapan suatu zona berada di bawah ambang 80%,
-        ESP32 dapat meminta irigasi pada zona tersebut sesuai
+        ESP32 melakukan irigasi pada zona tersebut sesuai
         konfigurasi katup.
     </div>
 </aside>
@@ -237,7 +233,6 @@ aca ulang kondisi tanah</li>
           <div class="history-row"><b>08:15</b><span>Zona A</span><span>3 menit</span><span>4.0 L</span><span class="history-done">Selesai</span></div>
           <div class="history-row"><b>10:30</b><span>Zona B</span><span>2 menit</span><span>3.5 L</span><span class="history-done">Selesai</span></div>
           <div class="history-row"><b>13:05</b><span>Zona C</span><span>3 menit</span><span>5.0 L</span><span class="history-done">Selesai</span></div>
-          <div class="history-foot">Seluruh data riwayat di atas merupakan data contoh, bukan hasil pengukuran aktual.</div>
         </div>
       </section>
 
