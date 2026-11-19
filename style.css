@@ -247,3 +247,33 @@ footer { display: flex; justify-content: space-between; gap: 15px; padding: 18px
 .nav-link {
     transition: background 0.2s ease, color 0.2s ease;
 }
+.logout-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    margin-top: 20px;
+
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 12px;
+
+    color: #d5e7dd;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.logout-button:hover {
+    background: #285c47;
+    color: #ffffff;
+}
+
+.logout-button .nav-icon {
+    width: 22px;
+    text-align: center;
+}
