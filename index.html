@@ -125,29 +125,80 @@
         <div class="section-heading">
           <div><span class="section-kicker">IRRIGATION CONTROL</span><h2 id="irrigation-title">Status dan distribusi irigasi</h2><p class="section-description">Ringkasan perangkat yang digunakan dalam sistem penyiraman.</p></div>
         </div>
-
-        <div class="control-grid">
-          <article class="control-card pump-card">
-            <div class="control-card-head"><div><span class="section-kicker">POMPA AIR</span><h3>Pompa utama</h3></div><span class="device-icon">⏻</span></div>
-            <div class="device-status"><span class="device-indicator off"></span><b>Standby</b></div>
-            <p>Pompa tidak sedang mengalirkan air.</p>
-            <div class="device-meta"><span>Mode operasi</span><b>Otomatis</b></div>
-          </article>
-          <article class="control-card">
-            <div class="control-card-head"><div><span class="section-kicker">KATUP ZONA</span><h3>Distribusi air</h3></div><span class="device-icon water-icon">⌁</span></div>
-            <div class="valve-row"><span>Katup Zona A</span><b class="valve-off">Tertutup</b></div>
-            <div class="valve-row"><span>Katup Zona B</span><b class="valve-off">Tertutup</b></div>
-            <div class="valve-row"><span>Katup Zona C</span><b class="valve-off">Tertutup</b></div>
-          <article class="control-card">
-            <div class="control-card-head"><div><span class="section-kicker">ALUR KERJA</span><h3>Siklus irigasi</h3></div><span class="device-icon cycle-icon">↻</span></div>
-            <ol class="workflow">
-              <li><span>1</span>Sensor membaca kelembapan tanah</li>
-              <li><span>2</span>ESP32 membandingkan dengan ambang</li>
-              <li><span>3</span>Pompa dan katup mengalirkan air</li>
-              <li><span>4</span>Sensor membaca ulang kondisi tanah</li>
+aca ulang kondisi tanah</li>
             </ol>
-          </article>
-        </div>
+       
+<div class="control-grid">
+
+  <!-- KARTU POMPA -->
+  <article class="control-card pump-card">
+    <div class="control-card-head">
+      <div>
+        <span class="section-kicker">POMPA AIR</span>
+        <h3>Pompa utama</h3>
+      </div>
+      <span class="device-icon">⏻</span>
+    </div>
+
+    <div class="device-status">
+      <span class="device-indicator off"></span>
+      <b>Standby</b>
+    </div>
+
+    <p>Pompa tidak sedang mengalirkan air.</p>
+
+    <div class="device-meta">
+      <span>Mode operasi</span>
+      <b>Otomatis</b>
+    </div>
+  </article>
+
+  <!-- KARTU KATUP ZONA -->
+  <article class="control-card">
+    <div class="control-card-head">
+      <div>
+        <span class="section-kicker">KATUP ZONA</span>
+        <h3>Distribusi air</h3>
+      </div>
+      <span class="device-icon water-icon">⌁</span>
+    </div>
+
+    <div class="valve-row">
+      <span>Katup Zona A</span>
+      <b class="valve-off">Tertutup</b>
+    </div>
+
+    <div class="valve-row">
+      <span>Katup Zona B</span>
+      <b class="valve-off">Tertutup</b>
+    </div>
+
+    <div class="valve-row">
+      <span>Katup Zona C</span>
+      <b class="valve-off">Tertutup</b>
+    </div>
+  </article>
+
+  <!-- KARTU ALUR KERJA -->
+  <article class="control-card">
+    <div class="control-card-head">
+      <div>
+        <span class="section-kicker">ALUR KERJA</span>
+        <h3>Siklus irigasi</h3>
+      </div>
+      <span class="device-icon cycle-icon">↻</span>
+    </div>
+
+    <ol class="workflow">
+      <li><span>1</span>Sensor membaca kelembapan tanah</li>
+      <li><span>2</span>ESP32 membandingkan dengan ambang</li>
+      <li><span>3</span>Pompa dan katup mengalirkan air</li>
+      <li><span>4</span>Sensor membaca ulang kondisi tanah</li>
+    </ol>
+  </article>
+
+</div>
+
       </section>
 
       <section class="section-block" id="history" aria-labelledby="history-title">
